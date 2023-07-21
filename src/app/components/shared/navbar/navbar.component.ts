@@ -14,9 +14,6 @@ export class NavbarComponent {
 
   constructor(private heroesService:HeroesService, private router:Router) {}
   
-  SearchText(dato:string) {
-    this.heroesService.search= dato;
-    console.log(this.filtro)
-  }
+ 
  
 }
