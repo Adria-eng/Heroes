@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-body {
-    font-family: Arial, sans-serif;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-hr {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input[type="text"],
-textarea {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-select {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input[type="date"] {
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    background-color: black;
-    color: white;
-    display: block;
-    margin: 0 auto;
-=======
 /* Estilos generales */
 
 body {
@@ -121,5 +71,25 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #0056b3;
->>>>>>> 9d7a6b6884e1f16705b3ee67eef5b7d8b5a9791b
+}
+
+
+/* Estilo para el botón "Login With Google" */
+
+.btn-info {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 16px;
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn-info:hover {
+    background-color: #0096d1;
 }

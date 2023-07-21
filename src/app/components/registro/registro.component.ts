@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { HeroesService, Heroe } from 'src/app/services/heroes.service';
+=======
+import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { HeroesService } from 'src/app/services/heroes.service';
+>>>>>>> 9d7a6b6884e1f16705b3ee67eef5b7d8b5a9791b
 
 @Component({
   selector: 'app-registro',
@@ -7,6 +13,7 @@ import { HeroesService, Heroe } from 'src/app/services/heroes.service';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
+<<<<<<< HEAD
   nuevoHeroe: Heroe = {
     nombre: '',
     bio: '',
@@ -44,3 +51,31 @@ export class RegistroComponent implements OnInit {
     this.imagenSeleccionada = event.target.files[0];
   }
 }
+=======
+
+  formReg: FormGroup;
+
+  constructor(
+    private heroesService: HeroesService,
+    private router: Router
+  ) {
+    this.formReg = new FormGroup({
+      email: new FormControl(),
+      password: new FormControl()
+    })
+  }
+
+  ngOnInit(): void {
+  }
+
+  onSubmit() {
+    this.heroesService.register(this.formReg.value)
+      .then(response => {
+        console.log(response);
+        this.router.navigate(['/login']);
+      })
+      .catch(error => console.log(error));
+  }
+
+}
+>>>>>>> 9d7a6b6884e1f16705b3ee67eef5b7d8b5a9791b

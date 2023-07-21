@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Registro de Heroes</h1>
 <hr>
 
@@ -26,3 +27,19 @@
 <br>
 <br>
 <button (click)="guardarHeroe()" type="button">Guardar</button>
+=======
+<div class="container">
+    <h2>Registro de usuario</h2>
+    <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" formControlName="email">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" formControlName="password">
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+>>>>>>> 9d7a6b6884e1f16705b3ee67eef5b7d8b5a9791b

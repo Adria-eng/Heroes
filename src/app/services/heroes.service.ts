@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword,signOut, signInWithPopup, GoogleAuthProvider } from '@angular/fire/auth';
 
 
 
@@ -6,6 +7,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HeroesService {
+<<<<<<< HEAD
   search: string = '';
   private heroes:Heroe[]=[
     {
@@ -77,25 +79,30 @@ export class HeroesService {
   }
   
   constructor() { 
+=======
+ 
+  constructor(private auth:Auth) { 
+>>>>>>> 9d7a6b6884e1f16705b3ee67eef5b7d8b5a9791b
     console.log("Servicio listo para usar...");
+    
   
   }
-  
-  getHeroe(idx: number):Heroe{
-    return this.heroes[idx];
+  register({email,password}:any){
+      return createUserWithEmailAndPassword(this.auth,email,password)
   }
   
 
-}
+  login({email,password}:any){
+    return signInWithEmailAndPassword(this.auth,email,password)
+  }
 
+    logout(){
+  return signOut(this.auth);
+    }
 
-
-export interface Heroe{
-  nombre: string;
-  bio: string;
-  img: string;
-  aparicion: string;
-  casa: string;
+  loginWithGoogle(){
+    return signInWithPopup(this.auth, new GoogleAuthProvider)
+  }
 
 
 }
