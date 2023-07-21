@@ -1,0 +1,28 @@
+<h1>Registro de Heroes</h1>
+<hr>
+
+<label for="nombreInput">Nombre:</label>
+<input id="nombreInput" type="text" name="nombreInput" [(ngModel)]="nuevoHeroe.nombre" required/>
+<br>
+<br>
+<label for="anioInput">Año:</label>
+<input type="date" id="anioInput" name="anioInput" [(ngModel)]="nuevoHeroe.aparicion" required min="1900-01-01" max="2023-12-31">
+<br>
+<br>
+<label for="bioTextarea">Biografía:</label>
+<textarea id="bioTextarea" name="bioTextarea" rows="4" cols="50" [(ngModel)]="nuevoHeroe.bio" required></textarea>
+<br>
+<br>
+<label for="casaSelect">Casa:</label>
+<select name="casaSelect" id="casaSelect" [(ngModel)]="nuevoHeroe.casa" required>
+  <option value="DC">DC</option>
+  <option value="Marvel">Marvel</option>
+</select>
+<br>
+<br>
+<label for="imagenInput">Imagen:</label>
+<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" (change)="onFileSelected($event)">
+
+<br>
+<br>
+<button (click)="guardarHeroe()" type="button">Guardar</button>

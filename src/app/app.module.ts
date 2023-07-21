@@ -15,6 +15,8 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroesService } from './services/heroes.service';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { FiltroPipe } from './pipes/filtro.pipe';
+import { RegistroComponent } from './components/registro/registro.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FiltroPipe } from './pipes/filtro.pipe';
     AboutComponent,
     HeroeComponent,
     
-    FiltroPipe
+    FiltroPipe,
+   RegistroComponent,
+      
   ],
   imports: [
     FormsModule,

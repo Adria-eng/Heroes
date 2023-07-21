@@ -58,11 +58,22 @@ export class HeroesService {
       casa: "Marvel"
     }
   ];
+  imagenes: File[] = [];
   
 
   getHeroes()
   {
     return this.heroes;
+  }
+  agregarHeroe(heroe: Heroe, imagen: File) {
+    this.heroes.push(heroe);
+  
+    // Genera una URL para la imagen y asígnala al héroe
+    const imgUrl = URL.createObjectURL(imagen);
+    heroe.img = imgUrl;
+  
+    // Guarda la imagen en la propiedad imagenes del servicio
+    this.imagenes.push(imagen);
   }
   
   constructor() { 
@@ -73,6 +84,7 @@ export class HeroesService {
   getHeroe(idx: number):Heroe{
     return this.heroes[idx];
   }
+  
 
 }
 
